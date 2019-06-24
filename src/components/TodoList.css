@@ -1,0 +1,24 @@
+.listItem {
+	padding: 20px;
+    background: #bdc3c7;
+    color: #2c3e50;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+    margin: 20px 0;
+    width: 350px;
+}
+
+.btnDelete {
+	outline: none;
+    border: none;
+    background: #e74c3c;
+    color: #f7f7f7;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
