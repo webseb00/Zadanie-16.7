@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --env development",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",

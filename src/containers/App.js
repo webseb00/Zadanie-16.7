@@ -2,6 +2,8 @@ import React from 'react';
 import style from './App.css';
 import Title from '../components/Title.js';
 import TodoList from '../components/TodoList.js';
+import TodoForm from '../components/TodoForm.js';
+import uuid from 'uuid';
 import { hot } from 'react-hot-loader';
 
 class App extends React.Component {
@@ -26,7 +28,7 @@ class App extends React.Component {
 	addTodo(val) {
 		const todo = {
 			text: val,
-			id: uuid.val4(),
+			id: uuid.v4(),
 		};
 		const data = [...this.state.data, todo];
 		this.setState({data});
@@ -41,6 +43,7 @@ class App extends React.Component {
 		return (
 			<div className={style.TodoApp}>
 				<Title data={this.state.data} />
+				<TodoForm add={this.addTodo.bind(this)} />
 				<TodoList delete={this.removeTodo.bind(this)} data={this.state.data} />
 			</div>
 		)

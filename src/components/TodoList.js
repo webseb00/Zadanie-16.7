@@ -15,7 +15,7 @@ class TodoList extends React.Component {
 		</p>)
 
 		return (
-			<div className={style.listItemWrapper}>
+			<div>
 				{dataList}
 			</div>
 		)
