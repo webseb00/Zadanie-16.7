@@ -6,17 +6,20 @@ class TodoList extends React.Component {
 		super(props)
 	}
 
-	render() {
-
-		const dataList = this.props.data.map(item => 
+	get getList() {
+		const { data, remove } = this.props;
+		const dataList = data.map(item => 
 		<p className={style.listItem} id={item.id} key={item.id}>
 			{item.text}
-			<button onClick={() => this.props.delete(item.id)} type="button" className={style.btnDelete}>X</button>
-		</p>)
+			<button onClick={() => remove(item.id)} type="button" className={style.btnDelete}>X</button>
+		</p>);
+		return dataList;
+	}
 
+	render() {
 		return (
 			<div>
-				{dataList}
+				{this.getList}
 			</div>
 		)
 	}
